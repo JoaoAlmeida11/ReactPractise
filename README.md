@@ -1,12 +1,12 @@
 # ReactPractise
 
-##not working
+## Not Working
 
 - api-universidade-aveiro
 
-##working
+## Working
 - enum16
 - axion-api-test
 
-##TODO
+## TODO
 - enum17
