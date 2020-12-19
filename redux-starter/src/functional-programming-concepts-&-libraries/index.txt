@@ -1,0 +1,64 @@
+// Redux Tutorial - Learn Redux from Scratch
+// Programming with Mosh
+// https://www.youtube.com/watch?v=poQXNp9ItL4&ab_channel=ProgrammingwithMosh
+
+
+// Functional Programming Fundamentals
+// function sayHello(){
+//     return "Hello World";
+// }
+// // Function as first class citizen
+// let fn=sayHello; // just passing the reference
+// fn() // "Hello World"
+// sayHello() // "Hello World"
+
+// // Function as and argument to another function
+// function greet(fnMessage){
+//     console.log(fnMessage)
+// }
+// greet(sayHello);// "Hello World"
+
+// // Return a function from another function
+// function sayHello(){
+//     return function(){
+//         return "Hello World";
+//     }
+// }
+// let fn=sayHello();
+// let message = fn();
+
+// // Higher-order function
+// // example 1
+// let numbers = [1, 2, 3];
+// numbers.map(number => number * 2);
+// // example 2
+// setTimeout(()=>console.log("Hello"), 1000); //console.log("Hello") after 1s
+
+// // Function Composing
+// // non-functional programming
+// let input = "   JavaScript   ";
+// let output = "<div>" + input.trim() + "</div>";
+// //functional programming
+// const trim = str => str.trim();
+// const wrapInDiv = str => `<div>${str}</div>`;
+// const toLowerCase = str => str.toLowerCase();
+
+// const result = wrapInDiv(toLowerCase(trim(input)));//for more complex problems has to many (); problem solved below
+
+// pipe without currying
+import {compose, pipe} from 'lodash/fp'
+// // Function Composing
+// // non-functional programming
+// let input = "   JavaScript   ";
+// let output = "<div>" + input.trim() + "</div>";
+// //functional programming
+// const trim = str => str.trim();
+// const wrapInDiv = str => `<div>${str}</div>`;
+// const toLowerCase = str => str.toLowerCase();
+
+// // const result = wrapInDiv(toLowerCase(trim(input)));//for more complex problems has to many (); problem solved below
+
+// // lodash; import on top
+// const transform = pipe(trim, toLowerCase, wrapInDiv);
+// transform(input);
+
